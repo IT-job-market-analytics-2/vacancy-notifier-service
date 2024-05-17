@@ -1,0 +1,12 @@
+POST http://localhost:15672/api/exchanges/%2F/amq.default/publish
+Content-Type: application/json
+Authorization: Basic YW5hbHl0aWNzX3NlcnZpY2U6cGFzc3dvcmQ=
+
+{
+  "properties": {
+    "content-type": "application/json"
+  },
+  "routing_key": "new-vacancies-queue",
+  "payload": "{\"id\":\"1045002896\",\"name\":\"Java developer\",\"salary\":{\"from\":50000,\"to\":80000,\"currency\":\"RUB\",\"gross\":false}",
+  "payload_encoding": "string"
+}
