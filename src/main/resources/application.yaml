@@ -1,0 +1,8 @@
+spring:
+  rabbitmq:
+    port: 5672
+
+rabbitmq:
+  consumer:
+    new-vacancy-queue: new-vacancies-queue
+
