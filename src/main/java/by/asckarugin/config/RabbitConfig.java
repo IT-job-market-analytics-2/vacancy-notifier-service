@@ -24,6 +24,7 @@ public class RabbitConfig {
         return new Jackson2JsonMessageConverter();
     }
 
+    @Bean
     public AmqpTemplate amqpTemplate(ConnectionFactory factory){
         RabbitTemplate rabbitTemplate = new RabbitTemplate(factory);
         rabbitTemplate.setMessageConverter(messageConverter());
