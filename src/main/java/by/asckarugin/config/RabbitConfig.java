@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitConfig {
 
-    @Value("${rabbitmq.consumer.new-vacancy-queue}")
+    @Value("${rabbitmq.consumer.new-vacancies-queue}")
     private String queueName;
 
     @Bean
