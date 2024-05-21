@@ -1,0 +1,11 @@
+spring:
+  rabbitmq:
+    host: localhost
+    username: analytics_service
+    password: password
+    port: 5672
+
+rabbitmq:
+  consumer:
+    new-vacancies-queue: new-vacancies-queue
+
