@@ -7,8 +7,6 @@ import lombok.Data;
 @Builder
 public class UserDto {
 
-    private String username;
-    private Long telegramChatId;
-
-
+    String username;
+    Long telegramChatId;
 }
