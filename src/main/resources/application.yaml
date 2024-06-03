@@ -11,3 +11,6 @@ rabbitmq:
   producer:
     telegram-notifications-queue: telegram-notifications-queue
 
+rest-api:
+  host: localhost:8080
+  endpoint: /users
