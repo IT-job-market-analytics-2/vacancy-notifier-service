@@ -8,4 +8,6 @@ spring:
 rabbitmq:
   consumer:
     new-vacancies-queue: new-vacancies-queue
+  producer:
+    telegram-notifications-queue: telegram-notifications-queue
 
