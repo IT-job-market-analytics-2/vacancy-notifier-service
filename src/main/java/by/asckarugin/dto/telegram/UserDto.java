@@ -9,4 +9,10 @@ public class UserDto {
 
     String username;
     Long telegramChatId;
+
+    public UserDto(String username, Long telegramChatId){
+        this.username = username;
+        this.telegramChatId = telegramChatId;
+    }
+
 }
