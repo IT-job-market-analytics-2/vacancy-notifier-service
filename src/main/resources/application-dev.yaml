@@ -5,12 +5,6 @@ spring:
     password: password
     port: 5672
 
-rabbitmq:
-  consumer:
-    new-vacancies-queue: new-vacancies-queue
-  producer:
-    telegram-notifications-queue: telegram-notifications-queue
-
 rest-api:
   host: localhost:8080
   endpoint: /users
