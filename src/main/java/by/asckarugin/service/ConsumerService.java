@@ -1,6 +1,6 @@
 package by.asckarugin.service;
 
-import by.asckarugin.dto.Vacancy;
+import by.asckarugin.dto.hh.Vacancy;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Service;
 
