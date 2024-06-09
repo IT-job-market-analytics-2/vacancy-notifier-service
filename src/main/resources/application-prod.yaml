@@ -1,0 +1,9 @@
+spring:
+  rabbitmq:
+    host: localhost
+    username: analytics_service
+    password: ${RABBIT_PASSWORD}
+
+rest-api:
+  host: http://rest-api:8080
+  endpoint: /users

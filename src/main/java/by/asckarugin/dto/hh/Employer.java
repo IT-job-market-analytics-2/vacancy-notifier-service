@@ -1,4 +1,4 @@
-package by.asckarugin.dto;
+package by.asckarugin.dto.hh;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
