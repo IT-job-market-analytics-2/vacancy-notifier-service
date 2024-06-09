@@ -1,13 +1,10 @@
-FROM eclipse-temurin:17-jdk-alpine as builder
-WORKDIR /vacancy-notifier
-COPY .mvn/ .mvn
-COPY mvnw pom.xml ./
-RUN ./mvnw dependency:go-offline
-COPY ./src ./src
-RUN ./mvnw clean install
+FROM maven:3.8.5-openjdk-17 AS build
+COPY /src /src
+COPY pom.xml /
+RUN mvn -f /pom.xml clean package
 
-FROM eclipse-temurin:17-jre-alpine
-WORKDIR /vacancy-notifier
-COPY --from=builder /vacancy-notifier/target/*.jar /vacancy-notifier/vacancy-notifier-service.jar
+FROM eclipse-temurin:17-jre
+WORKDIR /
+COPY --from=build /target/*.jar vacancy-notifier-service.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "/vacancy-notifier/vacancy-notifier-service.jar"]
+ENTRYPOINT ["java", "-jar", "vacancy-notifier-service.jar"]
