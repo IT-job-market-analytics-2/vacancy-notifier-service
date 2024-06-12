@@ -2,7 +2,7 @@ spring:
   rabbitmq:
     host: ${RABBITMQ_HOST}
     username: ${RABBITMQ_USERNAME}
-    password: ${RABBIT_PASSWORD}
+    password: ${RABBITMQ_PASSWORD}
 
 rest-api:
   host: http://rest-api:8080
